@@ -21,6 +21,7 @@ data$Global_reactive_power <- as.numeric(data$Global_reactive_power)
 
 
 # Prepare 2*2 graph matrix
+png(filename="plot4.png")
 par(mfrow = c(2,2))
 
 
@@ -68,3 +69,5 @@ with(data, plot(DateTime,
 axis(side = 2, 
      at = c(0.0, 0.1, 0.2, 0.3, 0.4, 0.5),
      labels = c("0.0", "0.1", "0.2", "0.3", "0.4", "0.5"))
+
+dev.off()

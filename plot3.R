@@ -17,6 +17,7 @@ data$Sub_metering_2 <- as.numeric(data$Sub_metering_2)
 data$Sub_metering_3 <- as.numeric(data$Sub_metering_3)
 
 # Show graph
+png(filename="plot3.png")
 with(data, plot(DateTime, 
                 Sub_metering_1, 
                 type = "n",
@@ -35,3 +36,4 @@ legend("topright",
        lty = 1,
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        col=c("black","red","blue"))
+dev.off()
